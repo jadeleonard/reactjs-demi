@@ -1,6 +1,7 @@
 import React from 'react'
 import { useClerk } from "@clerk/nextjs";
 import Link from 'next/link'
+import {UserButton} from '@clerk/nextjs'
 const Navbar = () => {
 
   const navigation = [
@@ -14,7 +15,7 @@ const Navbar = () => {
   ]
   return (
     <div className='sticky top-0'>
-      <nav class="bg-gray-800 sticky top-0">
+      <nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -38,16 +39,16 @@ const Navbar = () => {
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
-            <Link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Sign in</Link>
-            <Link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Sign up</Link>
-            <Link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</Link>
+            <Link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">My Project</Link>
+            <Link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">My Job</Link>
+            <Link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Message</Link>
             <Link href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</Link>
           </div>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
       
-
+        <UserButton afterSignOutUrl='/'/>
    
         <div class="relative ml-3">
       
