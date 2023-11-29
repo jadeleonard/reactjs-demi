@@ -1,7 +1,7 @@
 import React from 'react'
-import { useClerk } from "@clerk/nextjs";
+
 import Link from 'next/link'
-import {UserButton} from '@clerk/nextjs'
+
 const Navbar = () => {
 
   const navigation = [
@@ -48,7 +48,7 @@ const Navbar = () => {
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
       
-        <UserButton afterSignOutUrl='/'/>
+     
    
         <div class="relative ml-3">
       
